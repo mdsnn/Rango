@@ -3,7 +3,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("rango says mango")
+    context={
+        'boldMessage' : "crunchy, creamy, cookiey, candy, cupcake"
+    }
+    return render(request, "index.html", context)
 
 
 def about(request):
